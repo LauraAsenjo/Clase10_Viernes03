@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+<title>Población</title>
+</head>
+<body>
+    
+    
+    
+    
+<!--Nada más que p5.js para dibujar en el body de esta página-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/addons/p5.dom.min.js"></script>
+<script>
+    
+var denuncias = {
+roboconfuerza: 4701,
+roboconviolencia: 1924,
+roboporsorpresa: 1869,
+roboenlugarhabitado: 1517,
+roboaccesoriosvehiculos: 1277,
+roboenlugarnohabitado: 1003,
+robodevehículo: 816,
+otrosrobos: 88,
+hurtos: 3816,
+lesiones: 1780,
+lesionesleves: 1449,
+lesionesgraves: 331,
+violacion: 60,
+homicidios:14
+}
+ 
+function setup(){
+  var canvas = createCanvas(windowWidth,500);
+  canvas.position(0,0)
+  noStroke();
+  smooth();
+}
+function draw(){
+  background(54,94,178);
+ 
+  
+    fill(245,204,6);
+   textAlign(CENTER);
+      textSize(denuncias.roboconfuerza*(windowWidth/180000));
+    text(denuncias.roboconfuerza, ((windowWidth/15)*1), height/2);
+    textSize(12);
+    text('Robo con fuerza', ((windowWidth/15)*1), height/3+150);
+    
+       textAlign(CENTER);
+      textSize(denuncias.roboconviolencia*(windowWidth/150000));
+    text(denuncias.roboconviolencia, ((windowWidth/15)*2), height/2);
+    textSize(12);
+    text('Robo con violencia', ((windowWidth/15)*2), height/3+150);
+    
+           textAlign(CENTER);
+      textSize(denuncias.roboporsorpresa*(windowWidth/150000));
+    text(denuncias.roboporsorpresa, ((windowWidth/15)*3), height/2);
+    textSize(12);
+    text('Robo por sorpresa', ((windowWidth/15)*3), height/3+150);
+    
+           textAlign(CENTER);
+      textSize(denuncias.roboenlugarhabitado*(windowWidth/150000));
+    text(denuncias.roboenlugarhabitado, ((windowWidth/15)*4), height/2);
+    textSize(10);
+    text('Robo en lugar habitado', ((windowWidth/15)*4), height/3+150);
+    
+           textAlign(CENTER);
+      textSize(denuncias.roboaccesoriosvehiculos*(windowWidth/150000));
+    text(denuncias.roboaccesoriosvehiculos, ((windowWidth/15)*5), height/2);
+    textSize(9);
+    text('Robo accesorios de vehículo', ((windowWidth/15)*5), height/3+150);
+    
+     textAlign(CENTER);
+      textSize(denuncias.roboenlugarnohabitado*(windowWidth/150000));
+    text(denuncias.roboenlugarnohabitado, ((windowWidth/15)*6), height/2);
+    textSize(9);
+    text('Robo en lugar no habitado', ((windowWidth/15)*6), height/3+150);
+    
+     textAlign(CENTER);
+      textSize(denuncias.robodevehículo*(windowWidth/150000));
+    text(denuncias.robodevehículo, ((windowWidth/15)*7), height/2);
+    textSize(10);
+    text('Robo de vehículo', ((windowWidth/15)*7), height/3+150);
+    
+     textAlign(CENTER);
+      textSize(denuncias.otrosrobos*(windowWidth/20000));
+    text(denuncias.otrosrobos, ((windowWidth/15)*8), height/2);
+    textSize(12);
+    text('Otros Robos', ((windowWidth/15)*8), height/3+150);
+    
+     fill(115,221,204);
+     textAlign(CENTER);
+      textSize(denuncias.hurtos*(windowWidth/180000));
+    text(denuncias.hurtos, ((windowWidth/15)*9), height/2);
+    textSize(12);
+    text('Hurto', ((windowWidth/15)*9), height/3+150);
+    
+    fill(255,130,51);
+     textAlign(CENTER);
+      textSize(denuncias.lesiones*(windowWidth/180000));
+    text(denuncias.lesiones, ((windowWidth/15)*10), height/2);
+    textSize(12);
+    text('Lesiones', ((windowWidth/15)*10), height/3+150);
+    
+     textAlign(CENTER);
+      textSize(denuncias.lesionesleves*(windowWidth/180000));
+    text(denuncias.lesionesleves, ((windowWidth/15)*11), height/2);
+    textSize(12);
+    text('Lesiones leves', ((windowWidth/15)*11), height/3+150);
+    
+     textAlign(CENTER);
+      textSize(denuncias.lesionesgraves*(windowWidth/55000));
+    text(denuncias.lesionesgraves, ((windowWidth/15)*12), height/2);
+    textSize(12);
+    text('Lesiones Graves', ((windowWidth/15)*12), height/3+150);
+    
+     textAlign(CENTER);
+      textSize(denuncias.violacion*(windowWidth/16000));
+    text(denuncias.violacion, ((windowWidth/15)*13), height/2);
+    textSize(12);
+    text('Violación', ((windowWidth/15)*13), height/3+150);
+    
+
+    textAlign(CENTER);
+    textSize(denuncias.homicidios*(windowWidth/4500));
+    text(denuncias.homicidios, ((windowWidth/15)*14), height/2);
+    textSize(10);
+    text('Homicidios', ((windowWidth/15)*14), height/3+150);
+
+    fill(255,255,255);
+        textSize(27);
+    text('DENUNCIAS', (windowWidth/2), height/10);
+    
+     
+} 
+function windowResized() {
+  resizeCanvas(windowWidth, 500);
+}   
+</script>
+</body>
+</html>
